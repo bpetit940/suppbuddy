@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Router } from "@reach/router";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
+import Quiz from "./Quiz";
 import LandingPage from "./LandingPage";
 import { UserContext } from "../providers/UserProvider";
 import ProfilePage from "./ProfilePage";
@@ -17,6 +18,7 @@ function Application() {
       <SignUp path="signUp" />
       <SignIn path="signIn" />
       <PasswordReset path="passwordReset" />
+      <Quiz path="quiz" />
     </Router>
   );
 }
