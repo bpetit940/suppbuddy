@@ -6,18 +6,97 @@ class Quiz extends Component {
     return (
       <div className="quiz-container">
         <h1>Supplement Personalization Quiz</h1>
-        <form>
-          <label>Question 1</label>
-          <input type="radio" value="Option" />
-          <label>Option</label>
-          <input type="radio" value="Option" />
-          <label>Option</label>
-          <input type="radio" value="Option" />
-          <label>Option</label>
-          <input type="radio" value="Option" />
-          <label>Option</label>
-          <input type="radio" value="Option" />
-          <label>Option</label>
+        <form className="quiz">
+          <label>What areas of nutrition of interest to you?</label>
+          <br />
+          <input
+            type="radio"
+            value="Vitamins, Minerals, and Other Supplements"
+          />
+          <label>Vitamins, Minerals, and Other Supplements</label>
+          <br />
+          <input
+            type="radio"
+            value="Protein and Performance Supplements"
+            name="interest"
+          />
+          <label>Protein and Performance Supplements</label>
+          <br />
+          <input
+            type="radio"
+            value="Digestions and Detox Supplements"
+            name="interest"
+          />
+          <label>Digestions and Detox Supplements</label>
+          <br />
+          <input
+            type="radio"
+            value="Metabolism and Weight Loss"
+            name="interest"
+          />
+          <label>Metabolism and Weight Loss</label>
+          <br />
+          <input
+            type="radio"
+            value="Superfoods and Groceries"
+            name="interest"
+          />
+          <label>Superfoods and Groceries</label>
+          <br />
+          <input type="radio" value="Skin and Beauty" name="interest" />
+          <label>Skin and Beauty</label>
+          <br />
+          <input
+            type="radio"
+            value="Herbs and Natural Remedies"
+            name="interest"
+          />
+          <label>Herbs and Natural Remedies</label>
+          <br />
+          <br />
+          <label>
+            How much money are you willing to dedicate to purchasing
+            supplements?
+          </label>
+          <select>
+            <option value="50" name="money">
+              $50
+            </option>
+            <option value="100" name="money">
+              $100
+            </option>
+            <option value="200" name="money">
+              $200
+            </option>
+            <option value="201" name="money">
+              Whatever is needed to optimize my results
+            </option>
+          </select>
+          <br />
+          <br />
+          <label>How much do you weigh?</label>
+          <input type="number" name="weight" />
+          <br />
+          <br />
+          <label>How tall are you?</label>
+          <input type="number" name="height" />
+          <br />
+          <br />
+          <label>How active are you on a regular basis?</label>
+          <select>
+            <option value="none" name="activity">
+              Not active (Sedentary)
+            </option>
+            <option value="some" name="activity">
+              Some activity (working out 1-2 times a week)
+            </option>
+            <option value="medium" name="activity">
+              Moderate activity (working out 2-3 times a week)
+            </option>
+            <option value="high" name="activity">
+              High activity (working out 4+ times a week)
+            </option>
+          </select>
         </form>
       </div>
     );
