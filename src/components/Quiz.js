@@ -4,7 +4,24 @@ import { auth } from "../firebase";
 class Quiz extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.interest.value);
+    const {
+      Vitamins,
+      Protein,
+      Digestion,
+      Metabolism,
+      Superfoods,
+      Skin,
+      Herbs,
+    } = e.target;
+    const payload1 = {
+      vitamins: Vitamins.checked ? "1" : "0",
+      protein: Protein.checked ? "1" : "0",
+      digestion: Digestion.checked ? "1" : "0",
+      metabolism: Metabolism.checked ? "1" : "0",
+      superfoods: Superfoods.checked ? "1" : "0",
+      skin: Skin.checked ? "1" : "0",
+      herbs: Herbs.checked ? "1" : "0",
+    };
   };
   render() {
     return (
@@ -16,44 +33,45 @@ class Quiz extends Component {
           <input
             type="checkbox"
             value="Vitamins, Minerals, and Other Supplements"
+            name="Vitamins"
           />
           <label>Vitamins, Minerals, and Other Supplements</label>
           <br />
           <input
             type="checkbox"
             value="Protein and Performance Supplements"
-            name="interest"
+            name="Protein"
           />
           <label>Protein and Performance Supplements</label>
           <br />
           <input
             type="checkbox"
             value="Digestions and Detox Supplements"
-            name="interest"
+            name="Digestion"
           />
           <label>Digestions and Detox Supplements</label>
           <br />
           <input
             type="checkbox"
             value="Metabolism and Weight Loss"
-            name="interest"
+            name="Metabolism"
           />
           <label>Metabolism and Weight Loss</label>
           <br />
           <input
             type="checkbox"
             value="Superfoods and Groceries"
-            name="interest"
+            name="Superfoods"
           />
           <label>Superfoods and Groceries</label>
           <br />
-          <input type="checkbox" value="Skin and Beauty" name="interest" />
+          <input type="checkbox" value="Skin and Beauty" name="Skin" />
           <label>Skin and Beauty</label>
           <br />
           <input
             type="checkbox"
             value="Herbs and Natural Remedies"
-            name="interest"
+            name="Herbs"
           />
           <label>Herbs and Natural Remedies</label>
           <br />
