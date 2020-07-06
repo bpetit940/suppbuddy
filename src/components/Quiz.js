@@ -5,23 +5,32 @@ class Quiz extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const {
-      Vitamins,
-      Protein,
-      Digestion,
-      Metabolism,
-      Superfoods,
-      Skin,
-      Herbs,
+      vitamins,
+      protein,
+      digestion,
+      metabolism,
+      superfoods,
+      skin,
+      herbs,
+      money,
+      weight,
+      height,
+      activity,
     } = e.target;
     const payload1 = {
-      vitamins: Vitamins.checked ? "1" : "0",
-      protein: Protein.checked ? "1" : "0",
-      digestion: Digestion.checked ? "1" : "0",
-      metabolism: Metabolism.checked ? "1" : "0",
-      superfoods: Superfoods.checked ? "1" : "0",
-      skin: Skin.checked ? "1" : "0",
-      herbs: Herbs.checked ? "1" : "0",
+      vitamins: vitamins.checked ? "1" : "0",
+      protein: protein.checked ? "1" : "0",
+      digestion: digestion.checked ? "1" : "0",
+      metabolism: metabolism.checked ? "1" : "0",
+      superfoods: superfoods.checked ? "1" : "0",
+      skin: skin.checked ? "1" : "0",
+      herbs: herbs.checked ? "1" : "0",
+      money: money.value,
+      height: height.value,
+      weight: weight.value,
+      activity: activity.value,
     };
+    console.log(payload1);
   };
   render() {
     return (
@@ -33,45 +42,45 @@ class Quiz extends Component {
           <input
             type="checkbox"
             value="Vitamins, Minerals, and Other Supplements"
-            name="Vitamins"
+            name="vitamins"
           />
           <label>Vitamins, Minerals, and Other Supplements</label>
           <br />
           <input
             type="checkbox"
             value="Protein and Performance Supplements"
-            name="Protein"
+            name="protein"
           />
           <label>Protein and Performance Supplements</label>
           <br />
           <input
             type="checkbox"
             value="Digestions and Detox Supplements"
-            name="Digestion"
+            name="digestion"
           />
           <label>Digestions and Detox Supplements</label>
           <br />
           <input
             type="checkbox"
-            value="Metabolism and Weight Loss"
-            name="Metabolism"
+            value="metabolism and Weight Loss"
+            name="metabolism"
           />
           <label>Metabolism and Weight Loss</label>
           <br />
           <input
             type="checkbox"
             value="Superfoods and Groceries"
-            name="Superfoods"
+            name="superfoods"
           />
           <label>Superfoods and Groceries</label>
           <br />
-          <input type="checkbox" value="Skin and Beauty" name="Skin" />
+          <input type="checkbox" value="Skin and Beauty" name="skin" />
           <label>Skin and Beauty</label>
           <br />
           <input
             type="checkbox"
             value="Herbs and Natural Remedies"
-            name="Herbs"
+            name="herbs"
           />
           <label>Herbs and Natural Remedies</label>
           <br />
@@ -80,7 +89,7 @@ class Quiz extends Component {
             How much money are you willing to dedicate to purchasing
             supplements?
           </label>
-          <select>
+          <select name="money">
             <option value="50" name="money">
               $50
             </option>
@@ -105,7 +114,7 @@ class Quiz extends Component {
           <br />
           <br />
           <label>How active are you on a regular basis?</label>
-          <select>
+          <select name="activity">
             <option value="none" name="activity">
               Not active (Sedentary)
             </option>
