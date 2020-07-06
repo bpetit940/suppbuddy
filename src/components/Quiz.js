@@ -2,52 +2,56 @@ import React, { useContext, Component } from "react";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
 class Quiz extends Component {
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.interest.value);
+  };
   render() {
     return (
       <div className="quiz-container">
         <h1>Supplement Personalization Quiz</h1>
-        <form className="quiz">
+        <form className="quiz" onSubmit={this.handleSubmit}>
           <label>What areas of nutrition of interest to you?</label>
           <br />
           <input
-            type="radio"
+            type="checkbox"
             value="Vitamins, Minerals, and Other Supplements"
           />
           <label>Vitamins, Minerals, and Other Supplements</label>
           <br />
           <input
-            type="radio"
+            type="checkbox"
             value="Protein and Performance Supplements"
             name="interest"
           />
           <label>Protein and Performance Supplements</label>
           <br />
           <input
-            type="radio"
+            type="checkbox"
             value="Digestions and Detox Supplements"
             name="interest"
           />
           <label>Digestions and Detox Supplements</label>
           <br />
           <input
-            type="radio"
+            type="checkbox"
             value="Metabolism and Weight Loss"
             name="interest"
           />
           <label>Metabolism and Weight Loss</label>
           <br />
           <input
-            type="radio"
+            type="checkbox"
             value="Superfoods and Groceries"
             name="interest"
           />
           <label>Superfoods and Groceries</label>
           <br />
-          <input type="radio" value="Skin and Beauty" name="interest" />
+          <input type="checkbox" value="Skin and Beauty" name="interest" />
           <label>Skin and Beauty</label>
           <br />
           <input
-            type="radio"
+            type="checkbox"
             value="Herbs and Natural Remedies"
             name="interest"
           />
@@ -97,6 +101,7 @@ class Quiz extends Component {
               High activity (working out 4+ times a week)
             </option>
           </select>
+          <button type="submit">Submit Quiz</button>
         </form>
       </div>
     );
