@@ -64,38 +64,38 @@ class Quiz extends Component {
       height: height.value,
       weight: weight.value,
       activity: activity.value,
-      fruits: fruits.checked ? "1" : "0",
-      sun: sun.checked ? "1" : "0",
-      vegan: vegan.checked ? "1" : "0",
-      weightLoss: weightLoss.checked ? "1" : "0",
-      weightGain: weightGain.checked ? "1" : "0",
-      buildMuscle: buildMuscle.checked ? "1" : "0",
-      fish: fish.checked ? "1" : "0",
-      pregnancy: pregnancy.checked ? "1" : "0",
-      dairy: dairy.checked ? "1" : "0",
-      bloodPressure: bloodPressure.checked ? "1" : "0",
-      gluten: gluten.checked ? "1" : "0",
-      diabetes: diabetes.checked ? "1" : "0",
-      smoke: smoke.checked ? "1" : "0",
-      arthritis: arthritis.checked ? "1" : "0",
-      osteoporosis: osteoporosis.checked ? "1" : "0",
-      sex: sex.checked ? "1" : "0",
-      digestion: digestion.checked ? "1" : "0",
-      detox: detox.checked ? "1" : "0",
-      joint: joint.checked ? "1" : "0",
-      sleep: sleep.checked ? "1" : "0",
-      focus: focus.checked ? "1" : "0",
-      memory: memory.checked ? "1" : "0",
-      drowsiness: drowsiness.checked ? "1" : "0",
-      lowEnergy: lowEnergy.checked ? "1" : "0",
-      stress: stress.checked ? "1" : "0",
-      preworkout: preworkout.checked ? "1" : "0",
-      postworkout: postworkout.checked ? "1" : "0",
-      results: results.checked ? "1" : "0",
-      intraworkout: intraworkout.checked ? "1" : "0",
-      wrinkle: wrinkle.checked ? "1" : "0",
-      hair: hair.checked ? "1" : "0",
-      hydration: hydration.checked ? "1" : "0",
+      fruits: fruits.checked ? "true" : "false",
+      sun: sun.checked ? "true" : "false",
+      vegan: vegan.checked ? "true" : "false",
+      weightLoss: weightLoss.checked ? "true" : "false",
+      weightGain: weightGain.checked ? "true" : "false",
+      buildMuscle: buildMuscle.checked ? "true" : "false",
+      fish: fish.checked ? "true" : "false",
+      pregnancy: pregnancy.checked ? "true" : "false",
+      dairy: dairy.checked ? "true" : "false",
+      bloodPressure: bloodPressure.checked ? "true" : "false",
+      gluten: gluten.checked ? "true" : "false",
+      diabetes: diabetes.checked ? "true" : "false",
+      smoke: smoke.checked ? "true" : "false",
+      arthritis: arthritis.checked ? "true" : "false",
+      osteoporosis: osteoporosis.checked ? "true" : "false",
+      sex: sex.checked ? "true" : "false",
+      digestion: digestion.checked ? "true" : "false",
+      detox: detox.checked ? "true" : "false",
+      joint: joint.checked ? "true" : "false",
+      sleep: sleep.checked ? "true" : "false",
+      focus: focus.checked ? "true" : "false",
+      memory: memory.checked ? "true" : "false",
+      drowsiness: drowsiness.checked ? "true" : "false",
+      lowEnergy: lowEnergy.checked ? "true" : "false",
+      stress: stress.checked ? "true" : "false",
+      preworkout: preworkout.checked ? "true" : "false",
+      postworkout: postworkout.checked ? "true" : "false",
+      results: results.checked ? "true" : "false",
+      intraworkout: intraworkout.checked ? "true" : "false",
+      wrinkle: wrinkle.checked ? "true" : "false",
+      hair: hair.checked ? "true" : "false",
+      hydration: hydration.checked ? "true" : "false",
     };
     console.log(payload1);
   };
@@ -117,7 +117,7 @@ class Quiz extends Component {
           </label>
           <br />
           <input type="checkbox" name="sun" />
-          <label>Do you get 15 minutes of exposure to sunlight daily?</label>
+          <label>Do you get true5 minutes of exposure to sunlight daily?</label>
           <br />
           <input type="checkbox" name="vegan" />
           <label>Are you vegan?</label>
@@ -234,7 +234,7 @@ class Quiz extends Component {
             supplements?
           </label>
           <select name="money">
-            <option value="50" name="money">
+            <option value="51" name="money">
               $50
             </option>
             <option value="100" name="money">
