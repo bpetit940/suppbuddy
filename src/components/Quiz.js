@@ -260,16 +260,16 @@ class Quiz extends Component {
           <br />
           <label>How active are you on a regular basis?</label>
           <select name="activity">
-            <option value="none" name="activity">
+            <option value="false" name="activity">
               Not active (Sedentary)
             </option>
-            <option value="some" name="activity">
+            <option value="false" name="activity">
               Some activity (working out 1-2 times a week)
             </option>
-            <option value="medium" name="activity">
+            <option value="true" name="activity">
               Moderate activity (working out 2-3 times a week)
             </option>
-            <option value="high" name="activity">
+            <option value="true" name="activity">
               High activity (working out 4+ times a week)
             </option>
           </select>
