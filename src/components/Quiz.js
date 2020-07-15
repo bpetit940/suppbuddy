@@ -1,7 +1,19 @@
 import React, { useContext, Component } from "react";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
+import config from "../config";
+
 class Quiz extends Component {
+  sendUserData(userData) {
+    return fetch(`${config.API_ENDPOINT}`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ ...userData }),
+    });
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     const {
@@ -44,6 +56,7 @@ class Quiz extends Component {
       hair,
       hydration,
     } = e.target;
+
     const payload1 = {
       email: email.value,
       gender: gender.value,
@@ -260,8 +273,9 @@ class Quiz extends Component {
             </option>
           </select>
           <br />
-          <label>Enter Email:</label>
-          <input type="email" name="email" />
+          <label>Enter Email*:</label>
+          <input type="email" name="email" required />
+          <p>Fields with an * are required</p>
           <button type="submit">Submit Quiz</button>
         </form>
       </div>
