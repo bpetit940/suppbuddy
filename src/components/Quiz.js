@@ -251,11 +251,11 @@ class Quiz extends Component {
           <br />
           <br />
           <label>How much do you weigh?</label>
-          <input type="number" name="weight" />
+          <input type="number" name="weight" required />
           <br />
           <br />
           <label>How tall are you?</label>
-          <input type="number" name="height" />
+          <input type="number" name="height" required />
           <br />
           <br />
           <label>How active are you on a regular basis?</label>
