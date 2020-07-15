@@ -1,9 +1,11 @@
 import React, { useContext, Component } from "react";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
+import DataContext from "../Context/DataContext";
 import config from "../config";
 
 class Quiz extends Component {
+  static contextType = DataContext;
   sendUserData(userData) {
     return fetch(`${config.API_ENDPOINT}/user_data`, {
       method: "POST",
@@ -70,6 +72,7 @@ class Quiz extends Component {
       weightLoss: weightLoss.checked ? "true" : "false",
       weightGain: weightGain.checked ? "true" : "false",
       buildMuscle: buildMuscle.checked ? "true" : "false",
+      // fish we want true/false to be reversed*
       fish: fish.checked ? "false" : "true",
       pregnancy: pregnancy.checked ? "true" : "false",
       dairy: dairy.checked ? "true" : "false",
@@ -97,6 +100,7 @@ class Quiz extends Component {
       hair: hair.checked ? "true" : "false",
       hydration: hydration.checked ? "true" : "false",
     };
+    this.context.setEmail(email);
     console.log(payload1);
     this.sendUserData(payload1);
   };
