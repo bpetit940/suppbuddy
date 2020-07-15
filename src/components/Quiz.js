@@ -5,7 +5,7 @@ import config from "../config";
 
 class Quiz extends Component {
   sendUserData(userData) {
-    return fetch(`${config.API_ENDPOINT}`, {
+    return fetch(`${config.API_ENDPOINT}/user_data`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -118,7 +118,7 @@ class Quiz extends Component {
           </label>
           <br />
           <input type="checkbox" name="sun" />
-          <label>Do you get true5 minutes of exposure to sunlight daily?</label>
+          <label>Do you get 15 minutes of exposure to sunlight daily?</label>
           <br />
           <input type="checkbox" name="vegan" />
           <label>Are you vegan?</label>
