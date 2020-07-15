@@ -98,6 +98,7 @@ class Quiz extends Component {
       hydration: hydration.checked ? "true" : "false",
     };
     console.log(payload1);
+    this.sendUserData(payload1);
   };
   render() {
     return (
