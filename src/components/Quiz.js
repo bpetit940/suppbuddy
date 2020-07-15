@@ -70,7 +70,7 @@ class Quiz extends Component {
       weightLoss: weightLoss.checked ? "true" : "false",
       weightGain: weightGain.checked ? "true" : "false",
       buildMuscle: buildMuscle.checked ? "true" : "false",
-      fish: fish.checked ? "true" : "false",
+      fish: fish.checked ? "false" : "true",
       pregnancy: pregnancy.checked ? "true" : "false",
       dairy: dairy.checked ? "true" : "false",
       bloodPressure: bloodPressure.checked ? "true" : "false",
