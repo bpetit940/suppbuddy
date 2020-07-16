@@ -21,11 +21,10 @@ class Quiz extends Component {
       },
       body: JSON.stringify({ ...userData }),
     })
-      .then((res) => {
+      .then(() => {
         this.props.history.push("/dashboard");
-        if (!res.ok) return res.json().then((e) => Promise.reject(e));
+
       })
-      .catch((res) => this.setState({ error: res.error }));
   }
   // add to context email
   handleSubmit = (e) => {
