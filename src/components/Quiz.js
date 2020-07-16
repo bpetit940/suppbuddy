@@ -5,9 +5,13 @@ import DataContext from "../Context/DataContext";
 import config from "../config";
 
 class Quiz extends Component {
-  state = {
-    error: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+    };
+  }
+
   static contextType = DataContext;
   sendUserData(userData) {
     return fetch(`${config.API_ENDPOINT}/user_data`, {
