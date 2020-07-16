@@ -108,7 +108,7 @@ class Quiz extends Component {
       hair: hair.checked ? "true" : "false",
       hydration: hydration.checked ? "true" : "false",
     };
-    console.log(email);
+    console.log(email.value);
     // this.context.setEmail(email);
     this.sendUserData(payload1);
   };
