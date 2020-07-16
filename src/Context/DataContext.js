@@ -14,6 +14,7 @@ export class DataProvider extends Component {
     const state = {
       email: "",
       error: null,
+      setEmail: () => {},
     };
     this.state = state;
   }

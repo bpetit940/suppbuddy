@@ -5,14 +5,11 @@ import DataContext from "../Context/DataContext";
 import config from "../config";
 
 class Quiz extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      email: "",
-      setEmail: () => {},
-    };
-  }
+  static defaultProps = {
+    error: null,
+    email: {},
+    setEmail: () => {},
+  };
 
   static contextType = DataContext;
   sendUserData(userData) {
@@ -111,7 +108,8 @@ class Quiz extends Component {
       hair: hair.checked ? "true" : "false",
       hydration: hydration.checked ? "true" : "false",
     };
-    this.context.setEmail(email);
+    console.log(email);
+    // this.context.setEmail(email);
     this.sendUserData(payload1);
   };
   render() {
