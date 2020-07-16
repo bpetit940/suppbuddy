@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 const DataContext = React.createContext({
   email: "",
+  error: null,
   setEmail: () => {},
 });
 
@@ -12,6 +13,7 @@ export class DataProvider extends Component {
     super(props);
     const state = {
       email: "",
+      error: null,
     };
     this.state = state;
   }
@@ -25,6 +27,8 @@ export class DataProvider extends Component {
   render() {
     const value = {
       email: this.state.email,
+      error: this.state.error,
+      setEmail: this.setEmail,
     };
 
     return (

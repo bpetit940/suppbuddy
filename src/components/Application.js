@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react";
-import { Router } from "@reach/router";
+import React, { useState, useContext, Component } from "react";
+// import { Router } from "@reach/router";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Quiz from "./Quiz";
@@ -10,24 +10,32 @@ import { UserContext } from "../providers/UserProvider";
 import ProfilePage from "./ProfilePage";
 import PasswordReset from "./PasswordReset";
 import Dashboard from "./Dashboard";
+import DataContext from "../Context/DataContext";
 
-function Application() {
-  const user = useContext(UserContext);
-  return user ? (
-    <ProfilePage />
-  ) : (
-    <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/signUp" component={SignUp} />
-          <Route exact path="/signIn" component={SignIn} />
-          <Route exact path="/passwordReset" component={LandingPage} />
-          <Route exact path="/quiz" component={Quiz} />
-          <Route exact path="/dashboard" component={Dashboard} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
+class Application extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     error: null,
+  //   };
+  // }
+  // static contextType = DataContext;
+
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path={"/"} component={LandingPage} />
+            <Route exact path={"/signUp"} component={SignUp} />
+            <Route exact path={"/signIn"} component={SignIn} />
+            <Route exact path={"/passwordReset"} component={PasswordReset} />
+            <Route exact path={"/quiz"} component={Quiz} />
+            <Route exact path={"/dashboard"} component={Dashboard} />
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 export default Application;
