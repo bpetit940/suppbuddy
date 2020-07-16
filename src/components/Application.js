@@ -7,6 +7,7 @@ import LandingPage from "./LandingPage";
 import { UserContext } from "../providers/UserProvider";
 import ProfilePage from "./ProfilePage";
 import PasswordReset from "./PasswordReset";
+import Dashboard from "./Dashboard";
 
 function Application() {
   const user = useContext(UserContext);
@@ -19,6 +20,7 @@ function Application() {
       <SignIn path="signIn" />
       <PasswordReset path="passwordReset" />
       <Quiz path="quiz" />
+      <Dashboard path="dashboard" />
     </Router>
   );
 }

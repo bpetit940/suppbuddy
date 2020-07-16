@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 const DataContext = React.createContext({
   email: "",
+  setEmail: () => {},
 });
 
 export default DataContext;

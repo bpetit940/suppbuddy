@@ -5,6 +5,9 @@ import DataContext from "../Context/DataContext";
 import config from "../config";
 
 class Quiz extends Component {
+  state = {
+    error: null,
+  };
   static contextType = DataContext;
   sendUserData(userData) {
     return fetch(`${config.API_ENDPOINT}/user_data`, {
@@ -13,7 +16,12 @@ class Quiz extends Component {
         "content-type": "application/json",
       },
       body: JSON.stringify({ ...userData }),
-    });
+    })
+      .then((res) => {
+        this.props.history.push("/dashboard");
+        if (!res.ok) return res.json().then((e) => Promise.reject(e));
+      })
+      .catch((res) => this.setState({ error: res.error }));
   }
   // add to context email
   handleSubmit = (e) => {
@@ -101,7 +109,6 @@ class Quiz extends Component {
       hydration: hydration.checked ? "true" : "false",
     };
     this.context.setEmail(email);
-    console.log(payload1);
     this.sendUserData(payload1);
   };
   render() {
