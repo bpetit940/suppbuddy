@@ -1,7 +1,7 @@
 import React, { useContext, Component } from "react";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
-import DataContext from "../Context/DataContext";
+import { DataContext } from "../Context/DataContext";
 import config from "../config";
 
 class Quiz extends Component {
