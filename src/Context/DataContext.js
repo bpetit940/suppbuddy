@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 
-const DataContext = React.createContext({
+export const DataContext = React.createContext({
   email: "",
   error: null,
   setEmail: () => {},
 });
 
-export default DataContext;
-
-export class DataProvider extends Component {
+class DataProvider extends Component {
   constructor(props) {
     super(props);
     const state = {
       email: "",
       error: null,
-      setEmail: () => {},
     };
     this.state = state;
   }
@@ -39,3 +36,5 @@ export class DataProvider extends Component {
     );
   }
 }
+
+export default DataProvider;

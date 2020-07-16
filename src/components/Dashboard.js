@@ -17,7 +17,7 @@ class Dashboard extends Component {
   //   }
 
   render() {
-    return <h1>This is the dashboard</h1>;
+    return <h1>This is the dashboard (results page)</h1>;
   }
 }
 

@@ -13,13 +13,10 @@ import Dashboard from "./Dashboard";
 import DataContext from "../Context/DataContext";
 
 class Application extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     error: null,
-  //   };
-  // }
   // static contextType = DataContext;
+  state = {
+    email: "",
+  };
 
   render() {
     return (

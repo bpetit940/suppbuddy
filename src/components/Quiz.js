@@ -7,7 +7,7 @@ import config from "../config";
 class Quiz extends Component {
   static defaultProps = {
     error: null,
-    email: {},
+    email: "",
     setEmail: () => {},
   };
 

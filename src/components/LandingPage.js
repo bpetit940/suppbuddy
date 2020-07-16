@@ -4,7 +4,7 @@ import DataContext from "../Context/DataContext";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
 class LandingPage extends Component {
-  static defaultProps = {
+  state = {
     email: "",
     error: null,
     setEmail: () => {},
