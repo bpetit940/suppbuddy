@@ -10,7 +10,7 @@ import { UserContext } from "../providers/UserProvider";
 import ProfilePage from "./ProfilePage";
 import PasswordReset from "./PasswordReset";
 import Dashboard from "./Dashboard";
-import DataContext from "../Context/DataContext";
+import { DataContext } from "../Context/DataContext";
 
 class Application extends Component {
   // static contextType = DataContext;

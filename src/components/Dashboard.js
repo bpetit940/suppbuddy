@@ -1,5 +1,5 @@
 import React, { useContext, Component } from "react";
-import DataContext from "../Context/DataContext";
+import { DataContext } from "../Context/DataContext";
 import config from "../config";
 
 class Dashboard extends Component {

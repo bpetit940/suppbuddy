@@ -1,6 +1,6 @@
 import React, { useContext, Component } from "react";
 import { Link } from "react-router-dom";
-import DataContext from "../Context/DataContext";
+import { DataContext } from "../Context/DataContext";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
 class LandingPage extends Component {
