@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 
+<<<<<<< HEAD
 export const DataContext = React.createContext({
   email: "",
+=======
+const DataContext = React.createContext({
+  email: {},
+>>>>>>> ff8cfadd90b884c4b2b2b9c64420ef5b3513b2f3
   error: null,
   setEmail: () => {},
 });
