@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Router } from "@reach/router";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Quiz from "./Quiz";
@@ -14,14 +16,18 @@ function Application() {
   return user ? (
     <ProfilePage />
   ) : (
-    <Router>
-      <LandingPage path="/" />
-      <SignUp path="signUp" />
-      <SignIn path="signIn" />
-      <PasswordReset path="passwordReset" />
-      <Quiz path="quiz" />
-      <Dashboard path="dashboard" />
-    </Router>
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/signUp" component={SignUp} />
+          <Route exact path="/signIn" component={SignIn} />
+          <Route exact path="/passwordReset" component={LandingPage} />
+          <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/dashboard" component={Dashboard} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 export default Application;
