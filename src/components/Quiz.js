@@ -9,6 +9,8 @@ class Quiz extends Component {
     super(props);
     this.state = {
       error: null,
+      email: "",
+      setEmail: () => {},
     };
   }
 
@@ -20,11 +22,9 @@ class Quiz extends Component {
         "content-type": "application/json",
       },
       body: JSON.stringify({ ...userData }),
-    })
-      .then(() => {
-        this.props.history.push("/dashboard");
-
-      })
+    }).then(() => {
+      this.props.history.push("/dashboard");
+    });
   }
   // add to context email
   handleSubmit = (e) => {
